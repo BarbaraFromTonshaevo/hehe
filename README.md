@@ -1,77 +1,77 @@
-# Nuxt Minimal Starter
+# Template
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[Ссылка на проект в системе]()
 
-## Setup
+[Документация по API]()
 
-Make sure to install dependencies:
+[Макет]()
+
+## Установка
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## Запуск дев-режима
 
-Start the development server on `http://localhost:3000`:
+Запускает дев-режим на `http://localhost:3000`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Прод
 
-Build the application for production:
+Сбилдить проект:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
-Locally preview production build:
+Локально посмотреть билд:
 
 ```bash
-# npm
 npm run preview
+```
+Включить lint:
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```bash
+npm run lint
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Роутинг
 
-## node v20.19.0
+В проекте используется динамический роутинг. Поэтому в папке /pages лежит только 1 файл - [...pages].vue
+При смене роута проверяются его параметры. В зависимости от параметра роута выполняется запрос к данным определенной страницы и подгружается ее компонент.
+Компоненты страниц лежат в папке /components/pages
+
+<!-- Папка pages содержит следующие папки:
+- node - страницы типа Материал
+- view - страницы типа Представления
+- taxonomy - страницы типа Термины таксономии
+
+Страницы из макета и ТЗ и их пути в проекте
+- Главная - pages/front.vue
+- Каталог продукции - pages/view/catalog.vue
+- Список товаров - pages/taxonomy/catalog.vue
+- Карточка товара - pages/node/product.vue
+- О компании - pages/node/about.vue
+- Контакты - pages/node/contacts.vue
+- Текстовая страница - pages/node/page.vue -->
+
+## Сторы
+
+Проект использует pinia для стейт-менеджмента:
+<!-- - appState.vue - хранятся состояния всех модалок, шапки и меню
+- siteInfo.vue - хранятся общие данные которые приходят из api -->
+
+## Лейауты
+
+В проекте есть 2 лейаута:
+- scroller.vue - лейаут для пк. Реализован при помощи библиотеки [smooth-scrollbar](https://github.com/idiotWu/smooth-scrollbar). 
+**Важно!** Данная библиотека отрубает нативный скролл. Из-за этого position fixed и sticky работать не будут. Не будет отрабатывать скролл элементов с overflow: auto. В js scroll-ивент так же работать не будет. Обходы таких моментов можно найти в документации на библиотеку
+- default.vue - лейаут для мобильных устройств и планшетов
+
+## Карты
+
+В проекте используется [2-я версия яндекс карт](https://yandex.ru/dev/jsapi-v2-1/doc/ru/)

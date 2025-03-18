@@ -1,0 +1,70 @@
+@use "mixin" as m;
+
+
+:root {
+    --bg-prim: #FFFFFF;
+    --bg-sec: #F2F2F2;
+    --bg-tert: #FBFBFB;
+    --bg-cntrst: #292929;
+    --bg-cntrst-sec: #474747;
+    --bg-accent: #8BBD00;
+    --bg-modal: rgba(41, 41, 41, 0.54);
+
+    --btn-prim: #8BBD00;
+    --btn-prim-hover: #4F8100;
+    --btn-disabled: #474747;
+
+    --stroke-btn-prim: #9C9C9C;
+    --stroke-subheading: #DEDEDE;
+    --stroke-btn-cntrst: #8BBD00;
+    --stroke-card: #DEDEDE;
+    --stroke-card-sec: #E8E8E8;
+    --stroke-cntrst: #3D3D3D;
+    --stroke-header: #717171;
+    --stroke-line: #E9E9E9;
+
+    --text-prim-cntrst: #FFFFFF;
+    --text-prim: #292929;
+    --text-accent: #8BBD00;
+    --text-accent-focus: #4F8100;
+    --text-default: #5B5B5B;
+    --text-default-cntrst: #B5B5B5;
+    --text-default-add: #D3D3D3;
+    --text-cntrst-add1: #474747;
+    --text-dark-inputs: #797979;
+
+    --icons-prim: #FFFFFF;
+    --icons-accent: #8BBD00;
+    --icons-accent-focus: #4F8100;
+    --icons-cntrst: #292929;
+    --icons-add: #D3D3D3;
+
+    --system-error: #BD3030;
+
+    --marker: var(--text-accent);
+}
+@include m.laptop {
+    // :root {
+        
+    // }
+}
+
+@include m.tablet {
+    :root {
+        --section-offset: 80px;
+        --title-offset-m: 30px;
+    }
+}
+
+@include m.tablet-s {
+    :root {
+      --header-height: 90px;
+      --header-main-gap: 50px;
+    }
+}
+
+@include m.mobile {
+    // :root {
+       
+    // }
+}
